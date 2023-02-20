@@ -1,0 +1,13 @@
+[Unit]
+Description=Send my ip to the telegram channel
+After=multi-user.target
+
+[Service]
+User=vlad
+Group=vlad
+Type=simple
+Restart=always
+ExecStart=/usr/bin/python3 /home/vlad/scripts_for_this_server/send_ip_to_telegram.py
+
+[Install]
+WantedBy=multi-user.target
